@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EN_DE=coding</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <div class="box">
+            <h1>Welcome to ACE TEXT</h1>
+            
+            <form action="/encoding" method="post">
+                <h3>ENCODING TEXT</h3>
+                <label>Enter Text:</label>
+                <input type="text" name="en" value="{{ n1 if n1 is not none else '' }}" placeholder="Enter text to encode..." required>
+                
+                <label>Shift Key:</label>
+                <input type="number" name="num1" value="{{ num1 if num1 is not none else '' }}" placeholder="Enter number..." required><br>
+                
+                <button type="submit">encoding</button>
+            </form>
+
+            <form action="/decoding" method="post">
+                <h3>DECODING TEXT</h3>
+                <label>Enter Text:</label>
+                <input type="text" name="de" value="{{ n2 if n2 is not none else '' }}" placeholder="Enter text to decode..." required>
+                
+                <label>Shift Key:</label>
+                <input type="number" name="num2" value="{{ num2 if num2 is not none else '' }}" placeholder="Enter number..." required><br>
+                
+                <button type="submit">decoding</button>
+            </form>
+        </div>
+    </body>
+</html>
